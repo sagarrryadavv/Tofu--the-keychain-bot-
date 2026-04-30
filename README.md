@@ -73,26 +73,125 @@
 - **MCU:** STM32C011J6M6  
 - **Display:** 0.96" OLED (SH1106)  
 - **Input:** 2 Capacitive touch pads  
-- **Sound:** Piezo buzzer  
+- **Sound:** Piezo buzzer + PAM8403 amplifier  
 - **Power:** 3.3V  
 
 ---
 
 ## 🔌 Wiring  
 
-📌 Full wiring diagram and pin mapping available in this repo.  
+### 🔧 Upload Wiring (ST-Link)  
 
-⚠️ This project uses a **custom pin hack**, so follow wiring exactly.
+<p align="center">
+  <img src="media/stlink.png" width="400"/>
+</p>
+
+<table>
+<tr>
+<th>ST-Link Pin</th>
+<th>STM32 Pin</th>
+</tr>
+
+<tr>
+<td><b>3.3V</b></td>
+<td>Pin 2 (VDD)</td>
+</tr>
+
+<tr>
+<td><b>GND</b></td>
+<td>Pin 3 (VSS)</td>
+</tr>
+
+<tr>
+<td><b>SWDIO</b></td>
+<td>Pin 7 (PA13)</td>
+</tr>
+
+<tr>
+<td><b>SWCLK</b></td>
+<td>Pin 8 (PA14)</td>
+</tr>
+
+<tr>
+<td><b>RST</b></td>
+<td>Pin 4 (PA0)</td>
+</tr>
+
+</table>
+
+---
+
+### ⚠️ Flashing Instructions  
+
+- 🔌 Keep **RST (Pin 4)** connected while starting upload  
+- ⚡ Upload to **bare metal chip**  
+- ❗ If you see *"Unable to reset the target"*:
+  - Remove **RST connection**
+  - Upload again → it will work  
+
+---
+
+### 🤖 Full Bot Wiring  
+
+<p align="center">
+  <img src="media/Screenshot%202026-04-30%20222856.png" width="400"/>
+</p>
+
+<table>
+<tr>
+<th>STM32 Pin</th>
+<th>Component</th>
+</tr>
+
+<tr>
+<td><b>Pin 1 (PB7)</b></td>
+<td>OLED SDA (Data)</td>
+</tr>
+
+<tr>
+<td><b>Pin 2 (VDD)</b></td>
+<td>3.3V → OLED VCC + Touch VCC + PAM8403 (+)</td>
+</tr>
+
+<tr>
+<td><b>Pin 3 (VSS)</b></td>
+<td>GND → OLED GND + Touch GND + PAM8403 (-)</td>
+</tr>
+
+<tr>
+<td><b>Pin 4 (PA0)</b></td>
+<td>🚫 Leave Empty</td>
+</tr>
+
+<tr>
+<td><b>Pin 5 (PA11)</b></td>
+<td>Touch Sensor 1 (Smile / Feed / Sleep)</td>
+</tr>
+
+<tr>
+<td><b>Pin 6 (PA12)</b></td>
+<td>Touch Sensor 2 (Angry / Cry / Pomodoro)</td>
+</tr>
+
+<tr>
+<td><b>Pin 7 (PA13)</b></td>
+<td>PAM8403 Amplifier (+)</td>
+</tr>
+
+<tr>
+<td><b>Pin 8 (PA14)</b></td>
+<td>OLED SCL (Clock)</td>
+</tr>
+
+</table>
 
 ---
 
 ## ⚡ Performance Optimizations  
 
-This build is heavily optimized for speed:
-
 - ⚡ Direct register GPIO access  
 - 🚀 High-speed I2C pipeline  
-- 🔁 Loop unrolling (no runtime loops)  
+- 🔁 Loop unrolling  
 - 🧠 Manual timing control  
 - 🔄 OLED address reset every frame  
 
@@ -100,10 +199,8 @@ This build is heavily optimized for speed:
 
 ## ⚠️ Important Notes  
 
-> These are not optional — they prevent bugs and hardware issues.
-
 - 🔌 Disconnect ST-Link after uploading  
-- ⏱️ Keep startup delay (for stability)  
+- ⏱️ Keep startup delay  
 - 🔧 Use 10kΩ pull-ups  
 - ⚡ Use open-drain configuration  
 
@@ -124,26 +221,20 @@ This build is heavily optimized for speed:
 This is not just electronics.  
 It's a **tiny emotional companion**.
 
-The goal was to simulate personality using:
-- touch interactions  
-- expressions  
-- timing  
-- sound  
-
 ---
 
 ## 🚀 Future Improvements  
 
 - 🎤 Voice interaction  
 - 📱 Mobile control  
+- 🔵 Bluetooth  
 - 🎨 Animation editor  
-- 🔵 Bluetooth connectivity  
 
 ---
 
 ## 👤 Author  
 
-**Sagar**  
+**Sagar**
 
 ---
 

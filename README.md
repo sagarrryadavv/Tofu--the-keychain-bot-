@@ -83,7 +83,7 @@
 ### 🔧 Upload Wiring (ST-Link)  
 
 <p align="center">
-  <img src="media/stlink.png" width="400"/>
+  <img src="media/Screenshot%202026-04-30%20225634.png"/>
 </p>
 
 <table>
@@ -134,7 +134,7 @@
 ### 🤖 Full Bot Wiring  
 
 <p align="center">
-  <img src="media/Screenshot%202026-04-30%20222856.png" width="400"/>
+  <img src="media/Screenshot%202026-04-30%20225623.png"/>
 </p>
 
 <table>

@@ -206,12 +206,16 @@
 
 ---
 
-## 📸 Gallery  
+## 🎥 Demo  
 
 <p align="center">
-  <img src="images/1.jpg" width="200"/>
-  <img src="images/2.jpg" width="200"/>
-  <img src="images/3.jpg" width="200"/>
+  <a href="https://youtu.be/mUaqiWvevtg">
+    <img src="https://img.youtube.com/vi/mUaqiWvevtg/maxresdefault.jpg" width="500"/>
+  </a>
+</p>
+
+<p align="center">
+  ▶️ Watch Tofu in action — expressions, touch reactions, and personality
 </p>
 
 ---

@@ -1,7 +1,7 @@
 # 🤖 Tofu Keychain Bot  
 
 <p align="center">
-  <img src="images/main.jpg" width="300"/>
+  <img src="media/WhatsApp%20Image%202026-04-30%20at%208.57.45%20PM.jpeg" width="300"/>
 </p>
 
 <p align="center">

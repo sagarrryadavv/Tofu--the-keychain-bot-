@@ -215,7 +215,7 @@
 </p>
 
 <p align="center">
-  ▶️ Watch Tofu in action — expressions, touch reactions, and personality
+  Click this ☝️, ▶️ Watch Tofu in action — expressions, touch reactions, and personality
 </p>
 
 ---
